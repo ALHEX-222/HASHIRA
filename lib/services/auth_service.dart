@@ -310,8 +310,7 @@ Formato:
               .take(3)
               .toList();
       textoRespuesta =
-          '¡Claro! Aquí tienes algunos consejos: 💡\n' +
-          consejos.map((c) => '🔹 ${c.trim()}').join('\n');
+    '¡Claro! Aquí tienes algunos consejos: 💡\n${consejos.map((c) => '🔹 ${c.trim()}').join('\n')}';
     }
 
     historialConversacion.add({
