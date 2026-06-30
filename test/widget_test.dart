@@ -18,7 +18,7 @@ void main() {
       await tester.pumpWidget(buildTestApp());
       await tester.pump();
 
-      expect(find.text('ASISTENTE VIRTUAL - HASHIRA AI'), findsOneWidget);
+      expect(find.text('ASISTENTE VIRTUAL - HASHIRA AI MODIFICADO'), findsOneWidget);
     });
 
     testWidgets('2. Los botones de rol están presentes', (WidgetTester tester) async {
