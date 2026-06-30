@@ -407,10 +407,11 @@ class _AuthScreenState extends State<AuthScreen> {
           SizedBox(height: 25),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             children: [
-              _buildRoleButton('Estudiante', Colors.blue, Icons.person),
+              Flexible(child:_buildRoleButton('Estudiante', Colors.blue, Icons.person)),
               SizedBox(width: isMobile ? 15 : 20),
-              _buildRoleButton('Administrador', Colors.blue, Icons.settings),
+              Flexible(child:_buildRoleButton('Administrador', Colors.blue, Icons.settings)),
             ],
           ),
           SizedBox(height: 25),
@@ -486,12 +487,15 @@ class _AuthScreenState extends State<AuthScreen> {
               size: isMobile ? 16 : 18,
             ),
             SizedBox(width: 8),
-            Text(
-              role,
-              style: TextStyle(
-                fontSize: isMobile ? 14 : 16,
-                fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
-                color: isSelected ? Colors.blue[900] : Colors.grey[700],
+            Flexible(
+              child: Text(
+                role,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  fontSize: isMobile ? 14 : 16,
+                  fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
+                  color: isSelected ? Colors.blue[900] : Colors.grey[700],
+                ),
               ),
             ),
           ],
