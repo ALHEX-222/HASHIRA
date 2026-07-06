@@ -260,24 +260,25 @@ class _AdminScreenState extends State<AdminScreen> {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             children: [
               Text(
                 title,
                 style: TextStyle(
-                  fontSize: 24,
+                  fontSize: 16,
                   fontWeight: FontWeight.bold,
                   color: Colors.blue[900],
                   letterSpacing: 1.5,
                 ),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 12),
+              SizedBox(height: 6),
               Text(
                 description,
-                style: TextStyle(fontSize: 16, color: Colors.grey[800]),
+                style: TextStyle(fontSize: 12, color: Colors.grey[800]),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 20),
+              SizedBox(height: 8),
               ElevatedButton(
                 onPressed: onTap,
                 style: ElevatedButton.styleFrom(
@@ -285,11 +286,11 @@ class _AdminScreenState extends State<AdminScreen> {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(15),
                   ),
-                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 12),
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
                 ),
                 child: Text(
                   'Ir a conocer',
-                  style: TextStyle(color: Colors.white, fontSize: 18),
+                  style: TextStyle(color: Colors.white, fontSize: 14),
                 ),
               ),
             ],
