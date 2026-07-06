@@ -53,4 +53,3 @@ firebase.json
 # Archivos de variables de entorno (Aquí va tu API_KEY de Gemini)
 .env
 .env.*
-lib/firebase_options.dart
